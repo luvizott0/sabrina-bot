@@ -7,6 +7,9 @@ const youtubedl = require('youtube-dl-exec');
 const { spawn } = require('child_process');
 const ffmpegPath = require('ffmpeg-static');
 
+const http = require('http');
+http.createServer((req, res) => res.end('Bot Online')).listen(9000);
+
 const prefix = process.env.PREFIX || '!';
 const token = process.env.DISCORD_TOKEN;
 
